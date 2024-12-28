@@ -111,7 +111,7 @@ exports.login = async (req,res) => {
             return res.status(403).json({
                 success : false,
                 message : "Password does not match",
-            })
+            });
         }
     }
     catch(err){
@@ -119,6 +119,6 @@ exports.login = async (req,res) => {
         return res.status(500).json({
             success : false,
             message : "Login false" 
-        })
+        });
     }
 }
